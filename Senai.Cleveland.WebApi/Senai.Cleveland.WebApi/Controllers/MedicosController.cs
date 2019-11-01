@@ -14,6 +14,8 @@ namespace Senai.Cleveland.WebApi.Controllers
     {
         MedicosRepository medicosRepository = new MedicosRepository();
 
+        [HttpGet]
+
         public IActionResult Listar()
         {
             return Ok(medicosRepository.Listar());

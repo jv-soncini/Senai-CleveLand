@@ -12713,11 +12713,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\44634488833\\Documents\\Exercicio_Cleveland\\Senai.Cleveland.WebApi\\Senai.Cleveland.WebApi\\Senai.Cleveland.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\44634488833\\Documents\\Senai-CleveLand\\Senai.Cleveland.WebApi\\Senai.Cleveland.WebApi\\Senai.Cleveland.WebApi.csproj",
       "projectName": "Senai.Cleveland.WebApi",
-      "projectPath": "C:\\Users\\44634488833\\Documents\\Exercicio_Cleveland\\Senai.Cleveland.WebApi\\Senai.Cleveland.WebApi\\Senai.Cleveland.WebApi.csproj",
+      "projectPath": "C:\\Users\\44634488833\\Documents\\Senai-CleveLand\\Senai.Cleveland.WebApi\\Senai.Cleveland.WebApi\\Senai.Cleveland.WebApi.csproj",
       "packagesPath": "C:\\Users\\44634488833\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\44634488833\\Documents\\Exercicio_Cleveland\\Senai.Cleveland.WebApi\\Senai.Cleveland.WebApi\\obj\\",
+      "outputPath": "C:\\Users\\44634488833\\Documents\\Senai-CleveLand\\Senai.Cleveland.WebApi\\Senai.Cleveland.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

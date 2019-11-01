@@ -15,6 +15,7 @@ namespace Senai.Cleveland.WebApi.Domains
         {
         }
 
+        public virtual DbSet<Especialidade> Especialidade { get; set; }
         public virtual DbSet<Medicos> Medicos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -28,6 +29,17 @@ namespace Senai.Cleveland.WebApi.Domains
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Especialidade>(entity =>
+            {
+                entity.HasKey(e => e.IdEspecialidade);
+
+                entity.Property(e => e.Especialidade1)
+                    .IsRequired()
+                    .HasColumnName("Especialidade")
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+            });
+
             modelBuilder.Entity<Medicos>(entity =>
             {
                 entity.HasKey(e => e.IdMedico);
@@ -40,10 +52,17 @@ namespace Senai.Cleveland.WebApi.Domains
 
                 entity.Property(e => e.DataNascimento).HasColumnType("date");
 
+                entity.Property(e => e.Estado).HasDefaultValueSql("((1))");
+
                 entity.Property(e => e.Nome)
                     .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false);
+
+                entity.HasOne(d => d.EspecialidadeNavigation)
+                    .WithMany(p => p.Medicos)
+                    .HasForeignKey(d => d.Especialidade)
+                    .HasConstraintName("FK__Medicos__Especia__5DCAEF64");
             });
         }
     }

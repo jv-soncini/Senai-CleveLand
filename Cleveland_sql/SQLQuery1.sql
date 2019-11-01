@@ -15,3 +15,22 @@ create table Medicos
 insert into Medicos (Nome, DataNascimento, crm)
 values ('José', '20/04/2000','54513')
 
+Alter table Medicos add Estado bit default(1)
+
+update Medicos set Estado=1 
+
+create table Especialidade
+(
+	IdEspecialidade  int primary key identity not null
+	,Especialidade varchar(255) not null
+)
+			
+alter table Medicos add Especialidade int references Especialidade (IdEspecialidade)
+
+insert into Especialidade (Especialidade) values ('ginecologia')
+												,('obstetrícia')
+												,('clínico geral')
+
+												
+	
+
