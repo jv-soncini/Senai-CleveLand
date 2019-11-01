@@ -12,5 +12,6 @@ create table Medicos
 	,crm			int not null unique
 );
 
-insert into Medicos
+insert into Medicos (Nome, DataNascimento, crm)
+values ('José', '20/04/2000','54513')
 
